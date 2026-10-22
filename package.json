@@ -1,0 +1,1 @@
+{"name":"abismo","private":true,"type":"module","scripts":{"dev":"npx http-server -c-1 -p 5518 ."}}

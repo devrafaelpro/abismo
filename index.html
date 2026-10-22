@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Abismo</title>
+  <meta name="description" content="Mergulhe fundo. Volte vivo. Fique rico.">
+  <meta name="theme-color" content="#020a14">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Abismo">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/cond-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="cv"></canvas>
+
+  <!-- Superfície -->
+  <div id="hub" class="screen">
+    <div class="hub-top">
+      <div class="wallet">
+        <div class="cash" id="cash">R$ 0</div>
+        <div class="inc" id="inc"></div>
+      </div>
+      <button class="ibtn" id="snd" aria-label="Som"></button>
+    </div>
+    <div class="brand">
+      <h1>ABISMO</h1>
+      <p id="recordLine"></p>
+    </div>
+    <div class="dock">
+      <div class="starts" id="starts"></div>
+      <button id="diveBtn" class="dive-btn">
+        <span class="dive-label">MERGULHAR</span>
+        <small id="diveSub"></small>
+      </button>
+      <nav class="menu" id="menu"></nav>
+    </div>
+  </div>
+
+  <!-- Mergulho -->
+  <div id="hud" class="screen hidden">
+    <div class="hud-top">
+      <div class="depth">
+        <button class="ibtn sm" id="pause" aria-label="Pausar"></button>
+        <div>
+          <div class="dnum"><b id="dDepth">0</b><span>m</span></div>
+          <small id="dZone"></small>
+        </div>
+      </div>
+      <div class="o2" id="o2">
+        <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" class="o2-bg"/><circle cx="32" cy="32" r="27" class="o2-fg" id="o2Ring"/></svg>
+        <div class="o2-txt"><b id="o2Sec">0</b><small>AR</small></div>
+      </div>
+    </div>
+    <div class="hud-bag">
+      <span class="pill" id="dBag">0/6</span>
+      <span class="pill gold" id="dVal">R$ 0</span>
+    </div>
+    <div id="ret" class="ret"></div>
+    <div id="warn" class="warn hidden">VOLTE AGORA</div>
+    <div id="grabTip" class="grab hidden"><b>LULA COLOSSAL!</b><span>Toque rápido para se soltar</span><i id="grabBar"></i></div>
+    <div id="apnea" class="apnea hidden">SEM AR</div>
+    <div id="banner" class="banner"></div>
+    <div id="toast" class="dtoast"></div>
+  </div>
+
+  <div id="overlay" class="overlay hidden"></div>
+  <div id="sheetWrap" class="sheet-wrap hidden"><div class="sheet" id="sheet"></div></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
